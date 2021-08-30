@@ -1,0 +1,30 @@
+ \begin{frame}{Branches in Git}{Creating, Displaying, and Switching}
+  \begin{itemize}
+\item Creating a branch
+  \comm{git branch NEW\_BRANCH} (creates a new branch)
+  \comm{git checkout -b BRANCH\_NAME} (creates and switch)
+  \comm{git switch -c BRANCH\_NAME} (creates and switch, from Git 2.23)
+\item Displaying branches
+  \comm{git branch} (shows only local branches)
+  \comm{git branch -r} (shows only remote branches)
+  \comm{git branch -a} (shows all branches)
+\item Switching between branches
+  \comm{git checkout BRANCH\_NAME} (switches to another branch)
+  \comm{git switch BRANCH\_NAME} (switches to another branch)
+\end{itemize}
+\end{frame}
+
+ \begin{frame}{Branches in Git}{Comparing, Merging, Renaming, and Deleting}
+  \begin{itemize}
+\item Comparing two branches
+  \comm{git branch BRANCH\_A..BRANCH\_B} (compares all files)
+  \comm{git branch BRANCH\_A..BRANCH\_B SOME\_FILE} (compares only a given files)
+\item Merging branches
+  \comm{git merge BRANCH\_B} (merges branch b into branch a, you should be in branch a)
+  \comm{git merge BRANCH\_B BRNACH\_A} (does not matter on which branch you are)
+\item Renaming a branch
+  \comm{git branch -m OLD\_NAME NEW\_NAME} 
+\item Deleting a branch 
+  \comm{git branch -d BRANCH\_FOR\_DELETION} (deletes a branch)
+\end{itemize}
+\end{frame}

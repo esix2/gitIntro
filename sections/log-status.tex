@@ -1,0 +1,25 @@
+\begin{frame}{Git Basics}{Status and Log}
+\begin{itemize}
+\item Status and log
+\comm{git status} (Shows the status of the repo)
+\comm{git log} (Shows the commit log on the current branch)
+\comm{git log SOME\_BRNACH} (Shows the commit log on a specific branch)
+\comm{git log \dhyphen all} (Shows the commit log on all branches)
+\comm{git log -p} (Shows the commit log and the content difference of files per commit, combines 
+git log and git diff)
+\comm{git log \dhyphen decorate \dhyphen oneline \dhyphen graph \dhyphen all} (Very useful graph-like history)
+\end{itemize}
+\end{frame}
+\begin{frame}{Git Basics}{Aliases}
+\begin{itemize}
+\item Git Aliases, some useful examples:
+\comm{git config \dhyphen global alias.g \sq log \dhyphen decorate \dhyphen oneline \dhyphen graph \dhyphen all\sq} (makes "git g" an alias for the previous long command)
+\comm{git config \dhyphen global alias.l log} (makes "git l" an alias for "git log")
+\comm{git config \dhyphen global alias.loa \sq log \dhyphen oneline \dhyphen all\sq} (makes "git loa" an alias
+for "git log \dhyphen oneline \dhyphen all")
+\comm{git config \dhyphen global alias.s status} (makes "git s" an alias for "git status")
+\comm{git config \dhyphen global alias.b status} (makes "git b" an alias for "git branch")
+\comm{git config \dhyphen global alias.ch checkout} (makes "git ch" an alias for "git checkout")
+
+\end{itemize}
+\end{frame}
