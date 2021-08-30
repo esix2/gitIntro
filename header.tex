@@ -1,0 +1,77 @@
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+% \usecolortheme{orchid}
+%\usecolortheme{magenta}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage[T1]{fontenc}  % access \textquotedbl
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{tikz}
+\def\Check{\tikz\fill[color=green, scale=0.4] (0, 0.35) -- (0.25, 0) -- (1, 0.7) -- (0.25, 0.15) -- cycle;}
+\def\shortside{0.15}
+\def\longside{0.25}
+\def\Cross{\tikz\fill[color=red,rotate=45,scale=0.4](0,0) -- (\longside,0) -- (\longside,\longside)
+-- (\longside+\shortside,\longside) -- (\longside+\shortside,0) -- (2*\longside+\shortside,0)
+-- (2*\longside+\shortside,-\shortside)-- (\longside+\shortside,-\shortside)
+-- (\longside+\shortside,-\shortside-\longside) --  (\longside,-\shortside-\longside)
+--(\longside,-\shortside) -- (0,-\shortside) -- cycle;}
+
+\def\dsign{$\$$}
+\newcommand\comm[1]{\\ \vspace{0.2cm}\hspace{0.5cm} \footnotesize{\color{blue}\dsign #1}}
+\newcommand\subitem[1]{\\ \vspace{0.2cm}\hspace{0.5cm} #1}
+\def\dhyphen{\texttt{-{}-}} % double hypen
+%\def\qmark{\textquotedbl} %double qoutation mark
