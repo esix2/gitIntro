@@ -1,11 +1,11 @@
 \begin{frame}{Git Basics}{Difference}
 \begin{itemize}
 \item Comparing files on the same branch
-\comm{git diff} (shows the difference between working and staging area for all files\rightarrow to be staged, i.e., git add)
+  \comm{git diff} (shows the difference between working and staging area for all files$\rightarrow$ to be staged, i.e., git add)
 \comm{git diff SOME\_FILE} (shows the difference between working and staging area for a given file)
-\comm{git \dhyphen staged diff} (shows the difference between staging area and last commit for all files\rightarrow to be commited)
+\comm{git \dhyphen staged diff} (shows the difference between staging area and last commit for all files$\rightarrow$ to be commited)
 \comm{git \dhyphen cached diff} (the same as above)
-\comm{git diff HEAD} (combines "git diff" and "git diff \dhyphenr staged")
+\comm{git diff HEAD} (combines "git diff" and "git diff \dhyphen staged")
 \item Comparing files between two branches
   \comm{git branch BRANCH\_A..BRANCH\_B} (compares all files)
   \comm{git branch BRANCH\_A..BRANCH\_B SOME\_FILE} (compares only a given files)
