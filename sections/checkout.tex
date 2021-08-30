@@ -1,13 +1,27 @@
 \begin{frame}{Undoing Changes}{Checkout}
 \begin{itemize}
 \item Go back to some specific commit
-<<<<<<< Updated upstream
-\comm{git checkout 53c5105} (8 first digits out of 40 long hexadecimal digit HASH-1)
+\comm{git checkout 53c5105} (8 first digits out of a 40-long hexadecimal digit HASH-1)
 \begin{itemize}
 \item Hint: Now you get the message {\color{red} HEAD detachhed at 53c5105}
-  \comm{git checkout master} (to reattach the HEAD)
-  \comm{git switch master} (to reattach the HEAD)
-
+  \comm{git checkout master} (to reattach the HEAD to master)
+  \comm{git switch master} (to reattach the HEAD to master)
+  \comm{git switch -} (to reattach the HEAD to last branch)
 \end{itemize}
+  \comm{git checkout 53c5105 SOME\_FILE} (checks out only the given files to the given commit)
+  \comm{git checkout .} (checks out everything to last commit)
+  \comm{git checkout HEAD .} (the same as above)
+  \comm{git checkout -- FILE\_NAME} (restore the file to the last commit)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Undoing Changes}{Restore}
+\begin{itemize}
+  \item Unmodify changes (to the last commit)
+    \comm{git restore FILE\_NAME}
+  \item Restore one file to three commits prior to HEAD
+    \comm{git restore source=HEAD~3 FILE\_NAME}
+    \comm{git restore FILE\_NAME}
+    \comm{git restore --staged FILE\_NAME} (unstage the file)
 \end{itemize}
 \end{frame}
