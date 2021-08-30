@@ -1,0 +1,17 @@
+\begin{frame}{Hidden Area}{Stash}
+  {\footnotesize Switching between branches or checking out older commits, while having unclean staging area, 
+  are avoided or cause conflicts. Staged (but not commited) changes can hidden into the stash area to clean the  working area. Then, you can do whatever 
+you want, while changes in the stash remians, until they are applied or deleted.}
+\begin{itemize}
+\item 
+  \comm{git stash}  (stashes all staged changes)
+  \comm{git stash save "Something"}  (stashes the changes with a label)
+  \comm{git stash list} (shows the stash area, might be more than one entry)
+  \comm{git stash apply stash@\{1\}} (applies the stash before most recent)
+  \comm{git stash show stash@\{1\} -p} (shows content of $2^{\text{nd}}$ newest stash)
+  \comm{git stash apply} (applies the most recent stash)
+  \comm{git stash pop} (applies and then deletesi the stash)
+  \comm{git stash clear} (clears the stash area)
+  \comm{git stash drop stash@\{2\}} (deletes the $3^\text{rd}$ newest stash)
+\end{itemize}
+\end{frame}

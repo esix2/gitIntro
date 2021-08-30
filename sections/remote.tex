@@ -1,4 +1,4 @@
-\begin{frame}{Git Basics}{Cloning}
+\begin{frame}{Remote Repository}{Clone}
   \begin{itemize}
   \item Getting a remote repo:
     \comm{git init}
@@ -13,6 +13,22 @@
   \end{itemize}
   Now the repository is cloned and you can work on it!
 \end{frame}
-    %\item \textbf{origin}: A shorthand name for the remote repo
-    %  \comm{git remote show} (shows "origin" as output)
-    %  \comm{git remote show origin} (shows detailed info on origin)
+\begin{frame}{Remote Repository}{Remote}
+  \begin{itemize}
+    \item \textbf{origin}: A shorthand name for the remote repo
+      \comm{git remote show} (shows "origin" as output)
+      \comm{git remote show origin} (shows detailed info on origin)
+      \comm{git remote -v} (shows push/fetch address of the origin)
+  \end{itemize}
+\end{frame}
+\begin{frame}{Remote Repository}{Fetch, Pull, Push}
+  \begin{itemize}
+      \comm{git fetch origin} (fetches the last changes in the origin/main)
+\begin{itemize}
+  \item Hint: Now your HEAD is one commit behind origin
+\end{itemize}
+\comm{git merge origin/main} (to merge origin/main into your HEAD)
+\comm{git pulli origin} (fetches and merges at the same time)
+\comm{git push origin/main) (pushed the last changes in your HEAD into origin/main)
+  \end{itemize}
+\end{frame}
