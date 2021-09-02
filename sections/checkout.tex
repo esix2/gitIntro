@@ -2,12 +2,10 @@
 \begin{itemize}
 \item Go back to some specific commit
 \comm{git checkout 53c5105} (8 first digits out of a 40-long hexadecimal digit HASH-1)
-\begin{itemize}
-\item Hint: Now you get the message {\color{red} HEAD detachhed at 53c5105}
-  \comm{git checkout master} (to reattach the HEAD to master)
-  \comm{git switch master} (to reattach the HEAD to master)
-  \comm{git switch -} (to reattach the HEAD to last branch)
-\end{itemize}
+    \hspace{0.2cm} \\Hint: Now you get the message {\color{red} HEAD detachhed at 53c5105}
+    \hspace{0.2cm}  \comm{git checkout master} (to reattach the HEAD to master)
+    \hspace{0.2cm}  \comm{git switch master} (to reattach the HEAD to master)
+    \hspace{0.2cm}  \comm{git switch -} (to reattach the HEAD to last branch)
   \comm{git checkout 53c5105 SOME\_FILE} (checks out only the given files to the given commit)
   \comm{git checkout .} (checks out everything to last commit)
   \comm{git checkout HEAD .} (the same as above)

@@ -2,8 +2,8 @@
   {\footnotesize Switching between branches or checking out older commits, while having unclean staging area, 
   are avoided or cause conflicts. Staged (but not commited) changes can hidden into the stash area to clean the  working area. Then, you can do whatever 
 you want, while changes in the stash remians, until they are applied or deleted.}
-\begin{itemize}
-\item 
+%\begin{itemize}
+%\item 
   \comm{git stash}  (stashes all staged changes)
   \comm{git stash save "Something"}  (stashes the changes with a label)
   \comm{git stash list} (shows the stash area, might be more than one entry)
@@ -13,5 +13,5 @@ you want, while changes in the stash remians, until they are applied or deleted.
   \comm{git stash pop} (applies and then deletesi the stash)
   \comm{git stash clear} (clears the stash area)
   \comm{git stash drop stash@\{2\}} (deletes the $3^\text{rd}$ newest stash)
-\end{itemize}
+%\end{itemize}
 \end{frame}

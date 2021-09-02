@@ -11,18 +11,18 @@
 
 \begin{frame}{Undoing Changes}{Reset}
 \begin{itemize}
-  \item Unsaging a file
-    \comm{git reset HEAD SOME\_FILE}
-  \item Becareful: This command removes the history.
-    \comm{git reset <hash-commit>}
-    \comm{git reset HEAD$\sim$3} (moves the HEAD to 3 commits before current, but keep the changes)
-    \begin{center}
-    {\color{red} Careful: The last 3 commit will be removed}
-  \end{center}
-    \comm{git reset --hard HEAD$\sim$3} (moves the HEAD to 3 commits before current and do nor keep the changes)
-    \begin{center}
-      {\color{red} Be even more careful}
-  \end{center}
+ \item Unsaging a file
+   \comm{git reset HEAD SOME\_FILE}
+ \item Becareful: This command removes the history.
+   \comm{git reset <hash-commit>}
+   \comm{git reset HEAD$\sim$3} (moves the HEAD to 3 commits before current, but keep the changes)
+%    \begin{center}
+   {\color{red} Careful: The last 3 commit will be removed}
+%  \end{center}
+   \comm{git reset\dhyphen hard HEAD$\sim$3} (moves the HEAD to 3 commits before current and do nor keep the changes)
+%    \begin{center}
+     {\color{red} Be even more careful}
+%  \end{center}
 \end{itemize}
 {\textbf{ \color{green} Alternative:}} {\footnotesize "git revert", which instead deleting intermediate 
 commits, brings the commit of desire forward and creates a new commit upon merging.

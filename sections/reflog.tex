@@ -1,0 +1,38 @@
+\begin{frame}{Git Reflog}{reflog}
+\begin{itemize}
+    \item  Reference logs, or "reflogs", record when the tips of branches and other references were updated in the 
+      \textbf{local} repository. 
+    \item It expires by default after 90 days (default can be changed) 
+    \item HEAD@\{0\} means the very first reflog, while HEAD@\{1\} means the second and so forth.
+    \item What comes inside @\{~\} is called \textbf{qualifier}, i.e., entry number or time
+    \comm{git reflog show} (shows .git/logs/HEAD in reverse order)
+    \comm{git reflog show HEAD@\{0\}} (the same as above as, up to the latest reflog, i.e., HEAD@\{0\})
+    \comm{git reflog show HEAD@\{2\}} (does not show the first two reflogs)
+    \comm{git reflog show HEAD@\{27.Aug.2021\}} (reflogs up to the given date)
+    \comm{git reflog show HEAD@\{one.week.ago\}} (reflogs up to last week)
+    \comm{git reflog show master@\{one.week.ago\}} (reflogs up to last week, but only for master branch
+    or any other branch)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Git Reflog}{reflog}
+\begin{itemize}
+  \item {\color{red} Hint:} While HEAD$\sim$2 means 2 commit ago, HEAD\{2\} does not mean that. If you switch
+    to another branch, it is inserted in reflog.
+   \comm{git checkout HEAD$\sim$2} (checks out the 2 commits before the tip of the current branch)
+    \comm{git checkout HEAD@\{2\}} (it could a commit on another branch, or even it could the same commit
+   as HEAD, but only refereing to switching between branches)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Git Reflog}{reflog}
+\begin{itemize}
+  \item {\color{red} Saving the mistakes or undoing the past:} Find the hash number of the
+    state to which you want to go back using "git reflog show", then do
+    one the followings:
+    \comm{git reset \dhyphen hard 34a523fc} 
+    \comm{git reset \dhyphen hard master@{3}} 
+    \comm{git reset \dhyphen hard HEAD@{4}} 
+  \item {\color{red} \Large \textbf{Limitation:}} git reflogs are \textbf{only} local
+\end{itemize}
+\end{frame}
