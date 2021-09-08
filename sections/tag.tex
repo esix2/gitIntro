@@ -1,9 +1,29 @@
-\begin{frame}{Tag}{Tag}
+\begin{frame}{Tag}{Create}
 \begin{itemize}
-\item There two types of tag
+  \item Tags are to refer to (important) moments of time
+  \item They are used, e.g., as reference to release versions
+\item There two types of tags
 \begin{enumerate}
   \item \textbf{Lightweight} tag which is just a pointer to a specific commit.
-  \item \textbf{Annotated} tag whichi is checksummed, contains the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG). 
+    \comm{git tag -a TAG} (lightweight tag the current commit)
+    \comm{git tag -a TAG HASH} (lightweight tag the given hash)
+  \item \textbf{Annotated} tag which is checksummed, contains the tagger name, email, and date; have a tagging message; and can be signed and verified with GNU Privacy Guard (GPG).
+    \comm{git tag -a TAG} (annotated tag the current commit)
+    \comm{git tag -a TAG HASH} (annotated tag the given hash)
 \end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tag}{List, Move, Delete, Push}
+\begin{itemize}
+\item Tags can be used as argument to other git commands,
+  such as \emph{diff}, \emph{checkout}
+    \comm{git tag} (shows all existing tags)
+    \comm{git tag -l "v17*"} (shows all tags starting with v17)
+    \comm{git tag -f TAG} (forces move existing tag to the current commit)
+    \comm{git tag -d TAG} (deletes the tag)
+  \item Git does not push the tag by default to the remote. You should tell
+    git to do so, using
+    \comm{git push \dhyphen tag}
 \end{itemize}
 \end{frame}
