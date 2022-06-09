@@ -1,0 +1,25 @@
+\begin{frame}{Git SVN}{Cloning}
+  \begin{itemize}
+    \item \textbf{One time import from svn}:
+    \comm{git svn clone -T trunk -b branches -t tags -s -A authors.txt -r14542:HEAD https://10.32.93.102:9880/svn/pegaplan}
+    \item See all local and remote (svn) branches
+    \comm{git branch -a}
+    \item  Checkout a remote (svn) branch, e.g., 9.0, into a corresponding local branch, e.g., 9.0
+  \comm{git checkout -b 9.0 remotes/origin/9.0}
+  \item Check if the local branch is tracking the remote branch
+  \comm{git svn dcommit -n} (-n does not actually commit, it is for dry-run)
+  \item After updating the local repository, push it into the remote branch
+  \comm{git svn dcommit --username="ehszandi"}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Git SVN}{Cooperation in Branches}
+  \begin{itemize}
+    \item If the branch is already created, only check it out (see above), otherwise
+    \item Create a remote branch for debug/cooperation with colleagues and switch to the local corresponding branch
+\comm{git ch -b NEW\_BRANCH remotes/origin/NEW\_BRANCH}
+  \item After updating the local repository, push it into the remote branch
+  \comm{git svn dcommit --username="ehszandi"}
+  \end{itemize}
+\end{frame}
+
