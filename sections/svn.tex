@@ -1,7 +1,7 @@
 \begin{frame}{Git SVN}{Cloning}
   \begin{itemize}
     \item \textbf{One time import from svn}:
-    \comm{git svn clone -T trunk -b branches -t tags -s -A authors.txt -r14542:HEAD https://10.32.93.102:9880/svn/pegaplan}
+    \comm{git svn clone -s --prefix=svn/ -A authors.txt -r14542:HEAD https://10.32.93.102:9880/svn/pegaplan}
     \item See all local and remote (svn) branches
     \comm{git branch -a}
     \item  Checkout a remote (svn) branch, e.g., 9.0, into a corresponding local branch, e.g., 9.0
