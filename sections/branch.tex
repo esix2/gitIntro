@@ -31,8 +31,10 @@
 \begin{frame}{Remote Branches}{Creating and Deleting}
   \begin{itemize}
 \item Creating remotes branch in command line, where branch A already exists locally
-\comm{git checkout -b origing/BRANCH\_A}
+\comm{git push -u origing BRANCH\_A}
 \item Deleting a remote branch 
   \comm{git push -d origin/BRANCH\_FOR\_DELETION} 
+\item Checking out an existing remote branch 
+  \comm{git checkout -b BRANCH\_A origin/BRANCH\_A} 
 \end{itemize}
 \end{frame}
