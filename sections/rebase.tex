@@ -16,3 +16,46 @@ the log graph. The workflow is the same as "git merge", but instead with "git re
 \end{enumerate}
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Rebase}{Rebase vs merge}
+  \begin{figure}
+    \begin{center}
+    \includegraphics[width=0.6\linewidth]{pics/rebase-vs-merge-1.png}
+    \vspace{-0.3cm}
+  \end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Rebase}{Rebase vs merge}
+   \comm{git switch main}
+   \comm{git merge merge}
+  \begin{figure}
+    \begin{center}
+    \includegraphics[width=0.6\linewidth]{pics/rebase-vs-merge-2.png}
+    \vspace{-0.3cm}
+  \end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Rebase}{Rebase vs merge}
+   \comm{git switch feature}
+   \comm{git rebase main}
+  \begin{figure}
+    \begin{center}
+    \includegraphics[width=0.6\linewidth]{pics/rebase-vs-merge-3.png}
+    \vspace{-0.3cm}
+  \end{center}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Rebase}{Rebase vs merge}
+
+   \comm{git switch main}
+   \comm{git merge feature}
+%     \vspace{-3cm}
+  \begin{figure}
+    \begin{center}
+    \includegraphics[width=0.6\linewidth]{pics/rebase-vs-merge-4.png}
+  \end{center}
+\end{figure}
+\end{frame}
